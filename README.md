@@ -111,7 +111,8 @@ repositories {
     </servers>
 </settings>
 
+>>> 
 6. Run mvn package command to build the artifact
 7. Run mvn deploy to deploy artifact to the Nexus repo
 
-
+>>>>
