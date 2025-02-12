@@ -92,7 +92,7 @@ repositories {
    </plugin>
 
 4. Configure location of the Nexus repo
-
+``
     <distributionManagement>
         <snapshotRepository>
             <id>nexus-snapshots</id>
