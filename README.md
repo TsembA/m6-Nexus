@@ -48,7 +48,7 @@ curl -u user:pwd -X GET 'http://{host}:8081/service/rest/v1/components/<ID>'
 2. Assing the role to your user
 3. Add publish comand logic and repository url to your build.gradle file
 
-```groovy
+``` groovy
 publishing {
     publications {
         maven(MavenPublication) {
@@ -79,7 +79,7 @@ repositories {
 1. Create role to give user permissions and access to the repo
 2. Assing the role to your user
 3. Add plugin in to pom.xml file which will allow maven deploy JAR to Nexus
-
+``` xml
    <plugin> 
      <groupId>org.apache.maven.plugins</groupId>
      <artifactId>maven-deploy-plugin</artifactId>
@@ -92,7 +92,7 @@ repositories {
    </plugin>
 
 4. Configure location of the Nexus repo
-
+``` xml
     <distributionManagement>
         <snapshotRepository>
             <id>nexus-snapshots</id>
@@ -101,7 +101,7 @@ repositories {
     </distributionManagement>
  
 5. Configure local credentials for the Maven in ~/.m2/settings.xml
-
+``` xml
 <settings>
     <servers>
         <server>
