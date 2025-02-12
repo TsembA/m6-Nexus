@@ -79,7 +79,7 @@ repositories {
 1. Create role to give user permissions and access to the repo
 2. Assing the role to your user
 3. Add plugin in to pom.xml file which will allow maven deploy JAR to Nexus
-``` xml
+ ``` xml
    <plugin> 
      <groupId>org.apache.maven.plugins</groupId>
      <artifactId>maven-deploy-plugin</artifactId>
@@ -91,8 +91,8 @@ repositories {
      <artifactId>maven-deploy-plugin</artifactId>
    </plugin>
 
+
 4. Configure location of the Nexus repo
-``` xml
     <distributionManagement>
         <snapshotRepository>
             <id>nexus-snapshots</id>
