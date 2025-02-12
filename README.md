@@ -79,7 +79,7 @@ repositories {
 1. Create role to give user permissions and access to the repo
 2. Assing the role to your user
 3. Add plugin in to pom.xml file which will allow maven deploy JAR to Nexus
-``
+
    <plugin> 
      <groupId>org.apache.maven.plugins</groupId>
      <artifactId>maven-deploy-plugin</artifactId>
@@ -101,7 +101,7 @@ repositories {
     </distributionManagement>
  
 5. Configure local credentials for the Maven in ~/.m2/settings.xml
-``
+
 <settings>
     <servers>
         <server>
@@ -111,7 +111,7 @@ repositories {
         </server>
     </servers>
 </settings>
-``
+
 
 6. Run mvn package command to build the artifact
 7. Run mvn deploy to deploy artifact to the Nexus repo
