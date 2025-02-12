@@ -90,16 +90,17 @@ repositories {
      <groupId>org.apache.maven.plugins</groupId>
      <artifactId>maven-deploy-plugin</artifactId>
    </plugin>
-
+```
 
 4. Configure location of the Nexus repo
+ ``` xml    
     <distributionManagement>
         <snapshotRepository>
             <id>nexus-snapshots</id>
             <url>http://xxxxxxxxx:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
- 
+ ```
 5. Configure local credentials for the Maven in ~/.m2/settings.xml
 ``` xml
 <settings>
@@ -111,7 +112,7 @@ repositories {
         </server>
     </servers>
 </settings>
-
+```
 
 6. Run mvn package command to build the artifact
 7. Run mvn deploy to deploy artifact to the Nexus repo
