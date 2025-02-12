@@ -92,14 +92,14 @@ repositories {
    </plugin>
 
 4. Configure location of the Nexus repo
-``
+
     <distributionManagement>
         <snapshotRepository>
             <id>nexus-snapshots</id>
             <url>http://xxxxxxxxx:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
-``   
+ 
 5. Configure local credentials for the Maven in ~/.m2/settings.xml
 ``
 <settings>
