@@ -48,7 +48,7 @@ curl -u user:pwd -X GET 'http://{host}:8081/service/rest/v1/components/<ID>'
 2. Assing the role to your user
 3. Add publish comand logic and repository url to your build.gradle file
 
-```
+```groovy
 publishing {
     publications {
         maven(MavenPublication) {
@@ -58,18 +58,18 @@ publishing {
         }
     }
 }
-```
 repositories {
-        maven {
-            name 'nexus'
-            url "http://xxxxxx:8081/repository/maven-snapshots/" 
-            allowInsecureProtocol = true
-            credentials {
-                username project.repoUser 
-                password project.repoPassword
-            }
+    maven {
+        name 'nexus'
+        url "http://xxxxxx:8081/repository/maven-snapshots/" 
+        allowInsecureProtocol = true
+        credentials {
+            username project.repoUser 
+            password project.repoPassword
         }
     }
+}
+
  
 4. Run gradle build and gradle publish command to deploy artifact to the repo
 
@@ -92,7 +92,7 @@ repositories {
    </plugin>
 
 4. Configure location of the Nexus repo
-```
+
     <distributionManagement>
         <snapshotRepository>
             <id>nexus-snapshots</id>
